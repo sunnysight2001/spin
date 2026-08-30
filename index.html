@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SPIN Selling · Field Force Trainer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="login-wrap" id="loginScreen">
+    <div class="login-card">
+      <div class="login-kicker">Learning & Development · Field Force Excellence</div>
+      <h1>SPIN Selling</h1>
+      <p class="sub">Consultative questioning for pharmaceutical detailing. Situation → Problem → Implication → Need-payoff. Internal training only.</p>
+      <label for="email">Email</label>
+      <input id="email" type="email" autocomplete="username" value="mr@sunpharma.com" />
+      <label for="password">Password</label>
+      <input id="password" type="password" autocomplete="current-password" value="Gimliand@2026" />
+      <div class="login-error" id="loginError"></div>
+      <button class="primary" id="loginBtn">Enter workshop</button>
+      <p class="hint">Demo login is pre-filled. Facilitator narration and cabin lines are pre-built in eight languages. No live LLM. English medical terms stay English.</p>
+      <div class="badge-row">
+        <span class="mini-badge">22 slides</span>
+        <span class="mini-badge">Facilitator</span>
+        <span class="mini-badge">Cabin lines</span>
+        <span class="mini-badge">8 languages</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="app" id="app">
+    <aside class="sidebar">
+      <div class="brand-block">
+        <div class="k">L&D · Field Force Excellence</div>
+        <h2>SPIN Selling</h2>
+        <p>Introductory workshop · 22 slides</p>
+      </div>
+      <div id="chapterNav"></div>
+      <button class="logout" id="logoutBtn">Sign out</button>
+    </aside>
+
+    <main class="stage">
+      <header class="topbar">
+        <div>
+          <h3 id="slideTitle">SPIN Selling</h3>
+          <div class="meta" id="slideMeta">Slide 1 of 22</div>
+        </div>
+        <div>
+          <div class="meta" id="userLabel"></div>
+          <div class="voice-status" id="voiceStatus"></div>
+        </div>
+      </header>
+      <section class="slide-frame" id="slideFrame"></section>
+      <div class="controls">
+        <button class="ctrl mobile-only" id="chaptersBtn">Chapters</button>
+        <button class="ctrl" id="prevBtn">Prev</button>
+        <button class="ctrl" id="playBtn">Play</button>
+        <button class="ctrl" id="pauseBtn">Pause</button>
+        <button class="ctrl" id="repeatBtn">Repeat</button>
+        <button class="ctrl" id="nextBtn">Next</button>
+        <select class="ctrl" id="langSelect"></select>
+        <button class="ctrl" id="modeBtn">Cabin lines</button>
+        <button class="ctrl" id="autoBtn">Auto-advance on</button>
+        <button class="icon-btn" id="micBtn">Mic on</button>
+        <button class="icon-btn" id="spkBtn">Speaker on</button>
+        <button class="ctrl mobile-only" id="scriptBtn">Script</button>
+        <div class="progress"><span id="bar"></span></div>
+      </div>
+    </main>
+
+    <aside class="rail">
+      <h4 id="scriptHead">Facilitator</h4>
+      <div class="script-box" id="scriptBox"></div>
+      <div class="field-tip" id="tipBox"></div>
+      <h4 style="margin-top:16px">Keep in English</h4>
+      <div class="terms" id="termBox"></div>
+      <p class="muted" style="margin-top:16px;font-size:12px;color:#b7cdd4;line-height:1.45">
+        Voice commands: next, previous, repeat, pause, play, cabin, facilitator,
+        English, Hindi, Marathi, Gujarati, Tamil, Telugu, Punjabi, Bengali.
+      </p>
+    </aside>
+  </div>
+
+  <script src="js/deck.js"></script>
+  <script src="js/phonetics.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
